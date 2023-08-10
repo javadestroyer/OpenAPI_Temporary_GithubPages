@@ -1,0 +1,7 @@
+Ausschlüsse:
+  type: array
+  items:
+    $ref: './AusschlussOhneNutzDaten.yaml#/AusschlussOhneNutzDaten'
+  xml:
+    wrapped: true
+    name: response

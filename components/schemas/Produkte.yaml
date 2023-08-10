@@ -1,0 +1,7 @@
+Produkte:
+  type: array
+  items:
+    $ref: './ProduktOhneNutzDaten.yaml#/ProduktOhneNutzDaten'
+  xml:
+    wrapped: true
+    name: response

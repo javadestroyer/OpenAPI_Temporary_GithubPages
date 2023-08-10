@@ -1,0 +1,7 @@
+VortailoringID:
+  in: path
+  name: VortailoringID
+  required: true
+  description: the ID of the Vortailoring
+  schema:
+    $ref: '../schemas/Vortailoring.yaml#/Vortailoring/properties/id'

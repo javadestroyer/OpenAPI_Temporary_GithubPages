@@ -1,0 +1,7 @@
+SplitsOhneNutzdaten:
+  type: array
+  items:
+    $ref: './SplitOhneNutzdaten.yaml#/SplitOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: 'Splits'

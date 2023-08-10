@@ -1,0 +1,39 @@
+Disziplin:
+  type: object
+  xml:
+    name: 'Disziplin'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    Nummer:
+      type: integer
+    Sinn_und_Zweck:
+      $ref: './typeHtml.yaml#/typeHtml'
+    Produkt:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Produkt'
+        properties:
+          id:
+            $ref: './Produkt.yaml#/Produkt/properties/id'
+          name:
+            $ref: './Produkt.yaml#/Produkt/properties/name'
+      xml:
+        wrapped: true
+        name: 'Produkte'

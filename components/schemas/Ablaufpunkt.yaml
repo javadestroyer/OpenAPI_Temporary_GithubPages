@@ -1,0 +1,11 @@
+Ablaufpunkt:
+  type: object
+  xml:
+    name: 'Ablaufpunkt'
+  required:
+    - id
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true

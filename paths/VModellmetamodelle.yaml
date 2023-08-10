@@ -1,0 +1,17 @@
+get:
+  description: returns all V-Modellmetamodell
+  tags:
+    - Einstieg
+  responses:
+    '200':
+      description: Success
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/V-Modellmetamodelle.yaml#/V-Modellmetamodelle'
+    default:
+      description: Unexpected error
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Error.yaml#/Error'

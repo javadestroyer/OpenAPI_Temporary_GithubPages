@@ -1,0 +1,22 @@
+get:
+  description: >-
+    returns a specific Textbaustein
+  tags:
+    - Einstieg
+  parameters:
+    - $ref: '../components/parameters/VModellmetamodellID.yaml#/VModellmetamodellID'
+    - $ref: '../components/parameters/VModellvarianteID.yaml#/VModellvarianteID'
+    - $ref: '../components/parameters/TextbausteinID.yaml#/TextbausteinID'
+  responses:
+    '200':
+      description: Successfully returns
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Textbaustein.yaml#/Textbaustein'
+    default:
+      description: Unexpected error
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Error.yaml#/Error'

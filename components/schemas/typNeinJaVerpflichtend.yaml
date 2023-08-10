@@ -1,0 +1,6 @@
+typNeinJaVerpflichtend:
+  type: string
+  enum:
+    - Nein
+    - Ja
+    - Verpflichtend

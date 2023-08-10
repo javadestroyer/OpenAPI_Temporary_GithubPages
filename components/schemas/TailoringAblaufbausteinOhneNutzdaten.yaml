@@ -1,0 +1,54 @@
+AblaufbausteinOhneNutzdaten:
+  type: object
+  xml:
+    name: 'Ablaufbaustein'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    Übergang:
+      type: array
+      items:
+        $ref: './ÜbergangOhneNutzdaten.yaml#/ÜbergangOhneNutzdaten'
+      xml:
+        wrapped: true
+        name: 'Übergänge'
+    Ablaufpunkt:
+      type: object
+      xml:
+        name: 'Ablaufpunkte'
+      properties:
+        Startpunkt:
+          $ref: './StartpunktOhneNutzdaten.yaml#/StartpunktOhneNutzdaten'
+        Endpunkt:
+          $ref: './EndpunktOhneNutzdaten.yaml#/EndpunktOhneNutzdaten'
+        Ablaufpunkte:
+          type: array
+          items:
+            anyOf:
+              - $ref: './SplitsOhneNutzdaten.yaml#/SplitsOhneNutzdaten'
+              - $ref: './JoinsOhneNutzdaten.yaml#/JoinsOhneNutzdaten'
+              - $ref: './AblaufbausteinpunkteOhneNutzdaten.yaml#/AblaufbausteinpunkteOhneNutzdaten'
+              - $ref: './AblaufentscheidungspunkteOhneNutzdaten.yaml#/AblaufentscheidungspunkteOhneNutzdaten'
+    AblaubausteinspezifikationRef:
+      type: object
+      xml:
+        name: 'AblaubausteinspezifikationRef'
+      properties:
+        id:
+          $ref: './Ablaufbausteinspezifikation.yaml#/Ablaufbausteinspezifikation/properties/id'
+        name:
+          $ref: './Ablaufbausteinspezifikation.yaml#/Ablaufbausteinspezifikation/properties/name'

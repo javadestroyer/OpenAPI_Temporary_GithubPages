@@ -1,0 +1,7 @@
+VModellreleaseID:
+  in: path
+  name: VModellreleaseID
+  required: true
+  description: the ID of the V-Modellrelease
+  schema:
+    $ref: '../schemas/V-Modellrelease.yaml#/V-Modellrelease/properties/id'

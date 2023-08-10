@@ -1,0 +1,30 @@
+JoinOhneNutzdaten:
+  type: object
+  xml:
+    name: 'Join'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    JoinEingang:
+      type: array
+      items:
+        $ref: './JoinEingangOhneNutzdaten.yaml#/JoinEingangOhneNutzdaten'
+      xml:
+        wrapped: true
+        name: 'JoinEingänge'
+    JoinAusgang:
+      $ref: './JoinAusgangOhneNutzdaten.yaml#/JoinAusgangOhneNutzdaten'

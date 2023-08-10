@@ -1,0 +1,37 @@
+Werkzeugreferenz:
+  type: object
+  xml:
+    name: 'Werkzeugreferenz'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    Sinn_und_Zweck:
+      $ref: 'typeHtml.yaml#/typeHtml'
+    QuelleRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'QuelleRef'
+        properties:
+          id:
+            $ref: './Quelle.yaml#/Quelle/properties/id'
+          name:
+            $ref: './Quelle.yaml#/Quelle/properties/name'
+      xml:
+        wrapped: true
+        name: 'QuelleRefs'

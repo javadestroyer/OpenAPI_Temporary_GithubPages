@@ -1,0 +1,24 @@
+get:
+  description: >-
+    returns KapitelPlural
+  tags:
+    - New
+  parameters:
+    - $ref: '../components/parameters/VModellmetamodellID.yaml#/VModellmetamodellID'
+    - $ref: '../components/parameters/VModellvarianteID.yaml#/VModellvarianteID'
+    - $ref: '../components/parameters/V-Modell-StrukturID.yaml#/V-Modell-StrukturID'
+    - $ref: '../components/parameters/V-Modell-TeilID.yaml#/V-Modell-TeilID'
+    - $ref: '../components/parameters/KapitelID.yaml#/KapitelID'
+  responses:
+    '200':
+      description: Successfully returns
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/KapitelPlural.yaml#/KapitelPlural'
+    default:
+      description: Unexpected error
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Error.yaml#/Error'

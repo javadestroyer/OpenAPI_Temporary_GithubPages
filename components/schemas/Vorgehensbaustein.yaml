@@ -1,0 +1,115 @@
+Vorgehensbaustein:
+  type: object
+  xml:
+    name: 'Vorgehensbaustein'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    V-Modell-Kern:
+      $ref: './typeNeinJaAttribute.yaml#/typeNeinJaAttribute'
+    Nummer:
+      type: integer
+    basiert_auf_VB_Ref:
+      type: object
+      xml:
+        name: 'basiert_auf_VB_Ref'
+      properties:
+        id:
+          $ref: '#/Vorgehensbaustein/properties/id'
+    kann_basieren_auf_VB_Ref:
+      type: object
+      xml:
+        name: 'kann_basieren_auf_VB_Ref'
+      properties:
+        id:
+          $ref: '#/Vorgehensbaustein/properties/id'
+    Überblicksgrafik:
+      $ref: './typeHtml.yaml#/typeHtml'
+    Sinn_und_Zweck:
+      $ref: './typeHtml.yaml#/typeHtml'
+    Erläuterung:
+      $ref: './typeHtml.yaml#/typeHtml'
+    Disziplin:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Disziplin'
+        properties:
+          id:
+            $ref: './TailoringDisziplin.yaml#/TailoringDisziplin/properties/id'
+          name:
+            $ref: './TailoringDisziplin.yaml#/TailoringDisziplin/properties/name'
+      xml:
+        wrapped: true
+        name: 'Disziplinen'
+    Produkt:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Produkt'
+        properties:
+          id:
+            $ref: './TailoringProdukt.yaml#/TailoringProdukt/properties/id'
+          name:
+            $ref: './TailoringProdukt.yaml#/TailoringProdukt/properties/name'
+      xml:
+        wrapped: true
+        name: 'Produkte'
+    ExterneKopiervorlage:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'ExterneKopiervorlage'
+        properties:
+          id:
+            $ref: './ExterneKopiervorlage.yaml#/ExterneKopiervorlage/properties/id'
+          name:
+            $ref: './ExterneKopiervorlage.yaml#/ExterneKopiervorlage/properties/name'
+      xml:
+        wrapped: true
+        name: 'ExterneKopiervorlagen'
+    Thema:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Thema'
+        properties:
+          id:
+            $ref: './Thema.yaml#/Thema/properties/id'
+          name:
+            $ref: './Thema.yaml#/Thema/properties/name'
+      xml:
+        wrapped: true
+        name: 'Themen'
+    Aktivität:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Aktivität'
+        properties:
+          id:
+            $ref: './Aktivität.yaml#/Aktivität/properties/id'
+          name:
+            $ref: './Aktivität.yaml#/Aktivität/properties/name'
+      xml:
+        wrapped: true
+        name: 'Aktivitäten'

@@ -1,0 +1,35 @@
+typeDisziplingruppeOhneNutzdaten:
+  type: object
+  xml:
+    name: 'Disziplingruppe'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    DisziplinRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'DisziplinRef'
+        properties:
+          id:
+            $ref: './Disziplin.yaml#/Disziplin/properties/id'
+          name:
+            $ref: './Disziplin.yaml#/Disziplin/properties/name'
+      xml:
+        wrapped: true
+        name: 'DisziplinRefs'

@@ -1,0 +1,7 @@
+Ablaufbausteine:
+  type: array
+  items:
+    $ref: './TailoringAblaufbausteinOhneNutzdaten.yaml#/AblaufbausteinOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

@@ -1,0 +1,89 @@
+TailoringRolle:
+  type: object
+  xml:
+    name: 'Rolle'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    Rollenkategorie:
+      $ref: './typeRollenKlasse.yaml#/typeRollenKlasse'
+    Beschreibung:
+      $ref: './typeHtml.yaml#/typeHtml'
+    Aufgaben_und_Befugnisse:
+      $ref: './typeHtml.yaml#/typeHtml'
+    Fähigkeitsprofil:
+      $ref: './typeHtml.yaml#/typeHtml'
+    Rollenbesetzung:
+      $ref: './typeHtml.yaml#/typeHtml'
+    RolleVerantwortetProduktRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'RolleVerantwortetProduktRef'
+        properties:
+          name:
+            type: string
+            xml:
+              attribute: true
+          ProduktRef:
+            type: array
+            items:
+              type: object
+              xml:
+                name: 'ProduktRef'
+              properties:
+                id:
+                  $ref: './TailoringProdukt.yaml#/TailoringProdukt/properties/id'
+                name:
+                  $ref: './TailoringProdukt.yaml#/TailoringProdukt/properties/name'
+            xml:
+              wrapped: true
+              name: 'ProduktRefs'
+      xml:
+        wrapped: true
+        name: 'RolleVerantwortetProduktRefs'
+    RolleWirktMitBeiProduktRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'RolleWirktMitBeiProduktRef'
+        properties:
+          name:
+            type: string
+            xml:
+              attribute: true
+          ProduktRef:
+            type: array
+            items:
+              type: object
+              xml:
+                name: 'ProduktRef'
+              properties:
+                id:
+                  $ref: './TailoringProdukt.yaml#/TailoringProdukt/properties/id'
+                name:
+                  $ref: './TailoringProdukt.yaml#/TailoringProdukt/properties/name'
+                IstUnverzichtbar:
+                  $ref: './typeNeinJa.yaml#/typeNeinJa'
+            xml:
+              wrapped: true
+              name: 'ProduktRefs'
+      xml:
+        wrapped: true
+        name: 'RolleWirktMitBeiProduktRefs'

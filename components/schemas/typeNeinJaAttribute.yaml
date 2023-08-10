@@ -1,0 +1,7 @@
+typeNeinJaAttribute:
+  type: string
+  enum:
+    - Nein
+    - Ja
+  xml:
+    attribute: true

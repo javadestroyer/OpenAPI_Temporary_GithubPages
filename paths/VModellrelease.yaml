@@ -1,0 +1,20 @@
+get:
+  description: returns a specific V-Modellrelease of a specific V-Modellmetamodell
+  tags:
+    - Löschen
+  parameters:
+    - $ref: '../components/parameters/VModellmetamodellID.yaml#/VModellmetamodellID'
+    - $ref: '../components/parameters/VModellreleaseID.yaml#/VModellreleaseID'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/V-Modellrelease.yaml#/V-Modellrelease'
+    default:
+      description: Unexpected error
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Error.yaml#/Error'

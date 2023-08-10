@@ -1,0 +1,7 @@
+VModellvarianteID:
+  in: path
+  name: VModellvarianteID
+  required: true
+  description: the ID of the V-Modellvariante
+  schema:
+    $ref: '../schemas/V-Modellvariante.yaml#/V-Modellvariante/properties/id'

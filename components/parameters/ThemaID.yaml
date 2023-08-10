@@ -1,0 +1,7 @@
+ThemaID:
+  in: path
+  name: ThmaID
+  required: true
+  description: the ID of the Thema
+  schema:
+    $ref: '../schemas/Thema.yaml#/Thema/properties/id'

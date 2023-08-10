@@ -1,0 +1,7 @@
+Themen:
+  type: array
+  items:
+    $ref: './ThemaOhneNutzdaten.yaml#/ThemaOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

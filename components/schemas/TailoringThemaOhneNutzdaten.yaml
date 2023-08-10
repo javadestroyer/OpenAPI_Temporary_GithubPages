@@ -1,0 +1,66 @@
+TailoringThemaOhneNutzdaten:
+  type: object
+  xml:
+    name: 'Thema'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    TextbausteinRef:
+      type: object
+      nullable: true
+      xml:
+        name: 'TextbausteinRef'
+      properties:
+        id:
+          $ref: './Textbaustein.yaml#/Textbaustein/properties/id'
+        name:
+          $ref: './Textbaustein.yaml#/Textbaustein/properties/name'
+    ErzeugendeAbhängigkeitVonThemaRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'ErzeugendeAbhängigkeitVonThemaRef'
+        properties:
+          name:
+            type: string
+            xml:
+              attribute: true
+          ErzeugendeAbhängigkeitRef:
+            type: array
+            items:
+              type: object
+              xml:
+                name: 'ErzeugendeAbhängigkeitRef'
+              properties:
+                id:
+                  $ref: './TailoringErzeugendeAbhängigkeit.yaml#/TailoringErzeugendeAbhängigkeit/properties/id'
+                name:
+                  $ref: './TailoringErzeugendeAbhängigkeit.yaml#/TailoringErzeugendeAbhängigkeit/properties/name'
+            xml:
+              wrapped: true
+              name: 'ErzeugendeAbhängigkeitRefs'
+      xml:
+        wrapped: true
+        name: 'ErzeugendeAbhängigkeitVonThemaRefs'
+    Unterthema:
+      type: array
+      items:
+        $ref: './UnterthemaOhneNutzdaten.yaml#/UnterthemaOhneNutzdaten'
+      xml:
+        wrapped: true
+        name: 'Unterthemen'

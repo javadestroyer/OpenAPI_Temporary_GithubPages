@@ -1,0 +1,7 @@
+Werte:
+  type: array
+  items:
+    $ref: './WertOhneNutzdaten.yaml#/WertOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

@@ -1,0 +1,7 @@
+InhaltlicheAbhängigkeitenGruppeID:
+  in: path
+  name: ErzeugendeAbhängigkeitID
+  required: true
+  description: the ID of the InhaltlicheAbhängigkeitenGruppe
+  schema:
+    $ref: '../schemas/TailoringInhaltlicheAbhängigkeitenGruppe.yaml#/TailoringInhaltlicheAbhängigkeitenGruppe/properties/id'

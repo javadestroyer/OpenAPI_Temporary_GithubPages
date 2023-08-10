@@ -1,0 +1,7 @@
+TailoringThemen:
+  type: array
+  items:
+    $ref: './TailoringThemaOhneNutzdaten.yaml#/TailoringThemaOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

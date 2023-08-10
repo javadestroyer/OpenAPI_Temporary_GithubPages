@@ -1,0 +1,7 @@
+TailoringRollenkategorien:
+  type: array
+  items:
+    $ref: './TailoringRollenkategorie.yaml#/TailoringRollenkategorie'
+  xml:
+    wrapped: true
+    name: response

@@ -1,0 +1,7 @@
+ProjektmerkmalID:
+  in: path
+  name: ProjektmerkmalID
+  required: true
+  description: the ID of the Projektmerkmal
+  schema:
+    $ref: '../schemas/Projektmerkmal.yaml#/Projektmerkmal/properties/id'

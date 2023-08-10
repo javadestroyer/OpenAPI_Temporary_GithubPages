@@ -1,0 +1,7 @@
+Vorgehensbausteine:
+  type: array
+  items:
+    $ref: './VorgehensbausteinOhneNutzdaten.yaml#/VorgehensbausteinOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

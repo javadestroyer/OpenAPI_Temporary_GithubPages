@@ -1,0 +1,19 @@
+get:
+  description: returns a specific Metamodell
+  tags:
+    - Einstieg
+  parameters:
+    - $ref: '../components/parameters/VModellmetamodellID.yaml#/VModellmetamodellID'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/V-Modellmetamodell.yaml#/V-Modellmetamodell'
+    default:
+      description: Unexpected error
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Error.yaml#/Error'

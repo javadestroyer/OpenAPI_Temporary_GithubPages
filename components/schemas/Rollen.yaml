@@ -1,0 +1,7 @@
+Rollen:
+  type: array
+  items:
+    $ref: './RolleOhneNutzdaten.yaml#/RolleOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

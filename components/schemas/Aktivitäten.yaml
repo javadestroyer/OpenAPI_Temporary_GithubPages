@@ -1,0 +1,7 @@
+Aktivitäten:
+  type: array
+  items:
+    $ref: './AktivitätOhneNutzdaten.yaml#/AktivitätOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

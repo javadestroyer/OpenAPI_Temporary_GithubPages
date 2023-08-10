@@ -1,0 +1,7 @@
+Entscheidungspunkte:
+  type: array
+  items:
+    $ref: './EntscheidungspunktOhneNutzdaten.yaml#/EntscheidungspunktOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

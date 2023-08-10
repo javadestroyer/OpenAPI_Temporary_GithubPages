@@ -1,0 +1,27 @@
+AblaufentscheidungspunktOhneNutzdaten:
+  allOf:
+    - $ref: './Ablaufpunkt.yaml#/Ablaufpunkt'
+    - type: object
+      xml:
+        name: 'Ablaufentscheidungspunkt'
+      required:
+        - version
+        - name
+      properties:
+        version:
+          type: string
+          xml:
+            attribute: true
+        name:
+          type: string
+          xml:
+            attribute: true
+        EntscheidungspunktRef:
+          type: object
+          xml:
+            name: 'EntscheidungspunktRef'
+          properties:
+            id:
+              $ref: './Entscheidungspunkt.yaml#/Entscheidungspunkt/properties/id'
+            name:
+              $ref: './Entscheidungspunkt.yaml#/Entscheidungspunkt/properties/name'

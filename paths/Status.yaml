@@ -1,0 +1,17 @@
+get:
+  description: Gibt den Status der Rest-API zurück
+  tags:
+    - Status
+  responses:
+    '200':
+      description: Staus
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Status.yaml#/Status'
+    default:
+      description: Unexpected error
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Error.yaml#/Error'

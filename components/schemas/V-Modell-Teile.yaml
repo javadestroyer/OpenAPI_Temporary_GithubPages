@@ -1,0 +1,7 @@
+V-Modell-Teile:
+  type: array
+  items:
+    $ref: './V-Modell-TeilOhneNutzdaten.yaml#/V-Modell-TeilOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

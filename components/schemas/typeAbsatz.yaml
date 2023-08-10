@@ -1,0 +1,25 @@
+typeAbsatz:
+  type: object
+  xml:
+    name: 'Absatz'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    Nummer:
+      type: integer
+    Text:
+      $ref: 'typeHtml.yaml#/typeHtml'

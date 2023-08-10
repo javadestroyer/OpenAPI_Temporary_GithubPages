@@ -1,0 +1,7 @@
+VorgehensbausteinID:
+  in: path
+  name: VorgehensbausteinID
+  required: true
+  description: the ID of the Vorgehensbaustein
+  schema:
+    $ref: '../schemas/Vorgehensbaustein.yaml#/Vorgehensbaustein/properties/id'

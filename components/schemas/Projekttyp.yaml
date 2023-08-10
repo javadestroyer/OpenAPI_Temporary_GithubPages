@@ -1,0 +1,76 @@
+Projekttyp:
+  type: object
+  xml:
+    name: 'Projekttyp'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    Nummer:
+      type: integer
+    Beschreibung:
+      $ref: './typeHtml.yaml#/typeHtml'
+    VorgehensbausteinRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'VorgehensbausteinRef'
+        properties:
+          id:
+            $ref: './Vorgehensbaustein.yaml#/Vorgehensbaustein/properties/id'
+          name:
+            $ref: './Vorgehensbaustein.yaml#/Vorgehensbaustein/properties/name'
+      xml:
+        wrapped: true
+        name: 'VorgehensbausteinRefs'
+    ProjektmerkmalRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'ProjektmerkmalRef'
+        properties:
+          id:
+            $ref: './Projektmerkmal.yaml#/Projektmerkmal/properties/id'
+          name:
+            $ref: './Projektmerkmal.yaml#/Projektmerkmal/properties/name'
+      xml:
+        wrapped: true
+        name: 'ProjektmerkmalRefs'
+    AblaufbausteinspezifikationRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'AblaufbausteinspezifikationRef'
+        properties:
+          id:
+            $ref: './Ablaufbausteinspezifikation.yaml#/Ablaufbausteinspezifikation/properties/id'
+          name:
+            $ref: './Ablaufbausteinspezifikation.yaml#/Ablaufbausteinspezifikation/properties/name'
+      xml:
+        wrapped: true
+        name: 'AblaufbausteinspezifikationRefs'
+    PDS-Spezifikation:
+      type: object
+      xml:
+        name: 'PDS-Spezifikation'
+      properties:
+        id:
+          $ref: './Ablaufbausteinspezifikation.yaml#/Ablaufbausteinspezifikation/properties/id'
+        name:
+          $ref: './Ablaufbausteinspezifikation.yaml#/Ablaufbausteinspezifikation/properties/name'

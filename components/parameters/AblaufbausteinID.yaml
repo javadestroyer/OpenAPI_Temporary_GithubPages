@@ -1,0 +1,7 @@
+AblaufbausteinID:
+  in: path
+  name: AblaufbausteinID
+  required: true
+  description: the ID of the Ablaufbaustein
+  schema:
+    $ref: '../schemas/TailoringAblaufbaustein.yaml#/Ablaufbaustein/properties/id'

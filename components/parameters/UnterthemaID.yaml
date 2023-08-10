@@ -1,0 +1,7 @@
+UnterthemaID:
+  in: path
+  name: UnterthemaID
+  required: true
+  description: the ID of the Unterthema
+  schema:
+    $ref: '../schemas/Unterthema.yaml#/Unterthema/properties/id'

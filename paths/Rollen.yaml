@@ -1,0 +1,21 @@
+get:
+  description: returns all Rollen (zuvor implementiert)
+  tags:
+    - Löschen
+  parameters:
+    - $ref: '../components/parameters/VModellmetamodellID.yaml#/VModellmetamodellID'
+    - $ref: '../components/parameters/VModellreleaseID.yaml#/VModellreleaseID'
+    - $ref: '../components/parameters/VModellvarianteID.yaml#/VModellvarianteID'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Rollen.yaml#/Rollen'
+    default:
+      description: Unexpected error
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Error.yaml#/Error'

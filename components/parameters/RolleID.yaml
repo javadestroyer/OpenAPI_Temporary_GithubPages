@@ -1,0 +1,7 @@
+RolleID:
+  in: path
+  name: RolleID
+  required: true
+  description: the ID of the Rolle
+  schema:
+    $ref: '../schemas/Rolle.yaml#/Rolle/properties/id'

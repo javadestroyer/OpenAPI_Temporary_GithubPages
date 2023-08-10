@@ -1,0 +1,27 @@
+AblaufbausteinpunktOhneNutzdaten:
+  allOf:
+    - $ref: './Ablaufpunkt.yaml#/Ablaufpunkt'
+    - type: object
+      xml:
+        name: 'Ablaufbausteinpunkt'
+      required:
+        - version
+        - name
+      properties:
+        version:
+          type: string
+          xml:
+            attribute: true
+        name:
+          type: string
+          xml:
+            attribute: true
+        AblaufbausteinspezifikationRef:
+          type: object
+          xml:
+            name: 'AblaufbausteinspezifikationRef'
+          properties:
+            id:
+              $ref: './Ablaufbausteinspezifikation.yaml#/Ablaufbausteinspezifikation/properties/id'
+            name:
+              $ref: './Ablaufbausteinspezifikation.yaml#/Ablaufbausteinspezifikation/properties/name'

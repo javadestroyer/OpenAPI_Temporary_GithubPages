@@ -1,0 +1,7 @@
+V-Modell-StrukturID:
+  in: path
+  name: V-Modell-StrukturID
+  required: true
+  description: the ID of the V-Modell-Struktur
+  schema:
+    $ref: '../schemas/V-Modell-Struktur.yaml#/V-Modell-Struktur/properties/id'

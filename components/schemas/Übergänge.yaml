@@ -1,0 +1,7 @@
+Übergänge:
+  type: array
+  items:
+    $ref: './Übergang.yaml#/Übergang'
+  xml:
+    wrapped: true
+    name: 'Übergang'

@@ -1,0 +1,7 @@
+AblaufbausteinpunkteOhneNutzdaten:
+  type: array
+  items:
+    $ref: './AblaufbausteinpunktOhneNutzdaten.yaml#/AblaufbausteinpunktOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: 'Ablaufbausteinpunkte'

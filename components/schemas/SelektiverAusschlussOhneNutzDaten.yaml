@@ -1,0 +1,35 @@
+SelektiverAusschlussOhneNutzDaten:
+  type: object
+  xml:
+    name: 'SelektiverAusschluss'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    ProjektmerkmalRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'ProjektmerkmalRef'
+        properties:
+          id:
+            $ref: './Wert.yaml#/Wert/properties/id'
+          name:
+            $ref: './Wert.yaml#/Wert/properties/name'
+      xml:
+        wrapped: true
+        name: 'ProjektmerkmalRefs'

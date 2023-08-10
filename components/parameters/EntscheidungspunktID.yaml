@@ -1,0 +1,7 @@
+EntscheidungspunktID:
+  in: path
+  name: EntscheidungspunktID
+  required: true
+  description: the ID of the Entscheidungspunkt
+  schema:
+    $ref: '../schemas/Entscheidungspunkt.yaml#/Entscheidungspunkt/properties/id'

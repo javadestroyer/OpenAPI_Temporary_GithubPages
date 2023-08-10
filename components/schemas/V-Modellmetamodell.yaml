@@ -1,0 +1,54 @@
+V-Modellmetamodell:
+  type: object
+  xml:
+    name: 'V-Modellmetamodell'
+  required:
+    - id
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    PredecessorRef:
+      type: object
+      xml:
+        name: 'PredecessorRef'
+      nullable: true
+      properties:
+        id:
+          $ref: '#/V-Modellmetamodell/properties/id'
+        name:
+          $ref: '#/V-Modellmetamodell/properties/name'
+    V-Modellrelease:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'V-Modellrelease'
+        properties:
+          id:
+            $ref: './V-Modellrelease.yaml#/V-Modellrelease/properties/id'
+          name:
+            $ref: './V-Modellrelease.yaml#/V-Modellrelease/properties/name'
+      xml:
+        wrapped: true
+        name: 'V-Modellreleases'
+    V-Modellvariante:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'V-Modellvariante'
+        properties:
+          id:
+            $ref: './V-Modellvariante.yaml#/V-Modellvariante/properties/id'
+          name:
+            $ref: './V-Modellvariante.yaml#/V-Modellvariante/properties/name'
+      xml:
+        wrapped: true
+        name: 'V-Modellvarianten'

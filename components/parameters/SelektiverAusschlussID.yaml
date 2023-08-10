@@ -1,0 +1,7 @@
+SelektiverAusschlussID:
+  in: path
+  name: SelektiverAusschlussID
+  required: true
+  description: the ID of the SelektiverAusschluss
+  schema:
+    $ref: '../schemas/SelektiverAusschluss.yaml#/SelektiverAusschluss/properties/id'

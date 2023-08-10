@@ -1,0 +1,7 @@
+KapitelID:
+  in: path
+  name: KapitelID
+  required: true
+  description: the ID of the Kapitel
+  schema:
+    $ref: '../schemas/Kapitel.yaml#/Kapitel/properties/id'

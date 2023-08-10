@@ -1,0 +1,7 @@
+Unterthemen:
+  type: array
+  items:
+    $ref: './UnterthemaOhneNutzdaten.yaml#/UnterthemaOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

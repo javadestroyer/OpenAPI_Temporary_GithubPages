@@ -1,0 +1,7 @@
+JoinsOhneNutzdaten:
+  type: array
+  items:
+    $ref: './JoinOhneNutzdaten.yaml#/JoinOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: 'Joins'

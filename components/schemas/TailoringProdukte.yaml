@@ -1,0 +1,7 @@
+TailoringProdukte:
+  type: array
+  items:
+    $ref: './TailoringProduktOhneNutzdaten.yaml#/TailoringProduktOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

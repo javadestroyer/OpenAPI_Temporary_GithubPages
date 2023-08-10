@@ -1,0 +1,7 @@
+AktivitätID:
+  in: path
+  name: AktivitätID
+  required: true
+  description: the ID of the Aktivität
+  schema:
+    $ref: '../schemas/Aktivität.yaml#/Aktivität/properties/id'

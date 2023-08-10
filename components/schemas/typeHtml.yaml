@@ -1,0 +1,3 @@
+typeHtml:
+  type: string
+  example: "<html><h1>Überschrift</h1><p>Paragraph</p></html>"

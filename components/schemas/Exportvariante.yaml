@@ -1,0 +1,23 @@
+Exportvariante:
+  type: object
+  xml:
+    name: 'Exportvariante'
+    required:
+      - id
+      - version
+      - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    Beschreibung:
+      $ref: 'typeHtml.yaml#/typeHtml'

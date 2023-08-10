@@ -1,0 +1,97 @@
+ProjekttypvarianteOhneNutzdaten:
+  type: object
+  xml:
+    name: 'Projekttypvariante'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    ProjekttypRef:
+      type: object
+      xml:
+        name: 'ProjekttypRef'
+      properties:
+        id:
+          $ref: './Projekttyp.yaml#/Projekttyp/properties/id'
+        name:
+          $ref: './Projekttyp.yaml#/Projekttyp/properties/name'
+    ProjektmerkmalRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'ProjektmerkmalRef'
+        properties:
+          id:
+            $ref: './Projektmerkmal.yaml#/Projektmerkmal/properties/id'
+          name:
+            $ref: './Projektmerkmal.yaml#/Projektmerkmal/properties/name'
+      xml:
+        wrapped: true
+        name: 'ProjektmerkmalRefs'
+    VorgehensbausteinRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'VorgehensbausteinRef'
+        properties:
+          id:
+            $ref: './Vorgehensbaustein.yaml#/Vorgehensbaustein/properties/id'
+          name:
+            $ref: './Vorgehensbaustein.yaml#/Vorgehensbaustein/properties/name'
+      xml:
+        wrapped: true
+        name: 'VorgehensbausteinRefs'
+    Projektdurchführungsstrategie:
+      type: object
+      xml:
+        name: 'Projektdurchführungsstrategie'
+      properties:
+        id:
+          $ref: './TailoringAblaufbaustein.yaml#/Ablaufbaustein/properties/id'
+        version:
+          $ref: './TailoringAblaufbaustein.yaml#/Ablaufbaustein/properties/version'
+        name:
+          $ref: './TailoringAblaufbaustein.yaml#/Ablaufbaustein/properties/name'
+    AblaufbausteinRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'AblaufbausteinRef'
+        properties:
+          id:
+            $ref: './TailoringAblaufbaustein.yaml#/Ablaufbaustein/properties/id'
+          name:
+            $ref: './TailoringAblaufbaustein.yaml#/Ablaufbaustein/properties/name'
+      xml:
+        wrapped: true
+        name: 'AblaufbausteinRefs'
+    AblaufbausteinspezifikationRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'AblaufbausteinspezifikationRef'
+        properties:
+          id:
+            $ref: './Ablaufbausteinspezifikation.yaml#/Ablaufbausteinspezifikation/properties/id'
+          name:
+            $ref: './Ablaufbausteinspezifikation.yaml#/Ablaufbausteinspezifikation/properties/name'
+      xml:
+        wrapped: true
+        name: 'AblaufbausteinspezifikationRefs'

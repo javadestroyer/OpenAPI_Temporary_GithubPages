@@ -1,0 +1,49 @@
+AusschlussOhneNutzDaten:
+  type: object
+  xml:
+    name: 'Ausschluss'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    ProjekttypRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'ProjekttypRef'
+        properties:
+          id:
+            $ref: './Projekttyp.yaml#/Projekttyp/properties/id'
+          name:
+            $ref: './Projekttyp.yaml#/Projekttyp/properties/name'
+      xml:
+        wrapped: true
+        name: 'ProjekttypRefs'
+    ProjekttypvarianteRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'ProjekttypvarianteRef'
+        properties:
+          id:
+            $ref: './Projekttypvariante.yaml#/Projekttypvariante/properties/id'
+          name:
+            $ref: './Projekttypvariante.yaml#/Projekttypvariante/properties/name'
+      xml:
+        wrapped: true
+        name: 'ProjekttypvarianteRefs'

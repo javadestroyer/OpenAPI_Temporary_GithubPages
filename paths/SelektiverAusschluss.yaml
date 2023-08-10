@@ -1,0 +1,23 @@
+get:
+  description: returns a specific SelektiverAusschluss
+  tags:
+    - Löschen
+  parameters:
+    - $ref: '../components/parameters/VModellmetamodellID.yaml#/VModellmetamodellID'
+    - $ref: '../components/parameters/VModellreleaseID.yaml#/VModellreleaseID'
+    - $ref: '../components/parameters/VModellvarianteID.yaml#/VModellvarianteID'
+    - $ref: '../components/parameters/VortailoringID.yaml#/VortailoringID'
+    - $ref: '../components/parameters/SelektiverAusschlussID.yaml#/SelektiverAusschlussID'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/SelektiverAusschluss.yaml#/SelektiverAusschluss'
+    default:
+      description: Unexpected error
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Error.yaml#/Error'

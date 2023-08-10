@@ -1,0 +1,7 @@
+TailoringExterneKopiervorlagen:
+  type: array
+  items:
+    $ref: './TailoringExterneKopiervorlageOhneNutzdaten.yaml#/TailoringExterneKopiervorlageOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

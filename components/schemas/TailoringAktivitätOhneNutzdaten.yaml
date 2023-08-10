@@ -1,0 +1,115 @@
+TailoringAktivitätOhneNutzdaten:
+  type: object
+  xml:
+    name: 'Aktivität'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    TextbausteinRef:
+      type: object
+      nullable: true
+      xml:
+        name: 'TextbausteinRef'
+      properties:
+        id:
+          $ref: './Textbaustein.yaml#/Textbaustein/properties/id'
+        name:
+          $ref: './Textbaustein.yaml#/Textbaustein/properties/name'
+    AktivitätZuMethodenreferenzRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'AktivitätZuMethodenreferenzRef'
+        properties:
+          name:
+            type: string
+            xml:
+              attribute: true
+          MethodenreferenzRef:
+            type: array
+            items:
+              type: object
+              xml:
+                name: 'MethodenreferenzRef'
+              properties:
+                id:
+                  $ref: './Methodenreferenz.yaml#/Methodenreferenz/properties/id'
+                name:
+                  $ref: './Methodenreferenz.yaml#/Methodenreferenz/properties/name'
+            xml:
+              wrapped: true
+              name: 'MethodenreferenzRefs'
+      xml:
+        wrapped: true
+        name: 'AktivitätZuMethodenreferenzRefs'
+    AktivitätZuWerkzeugreferenzRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'AktivitätZuWerkzeugreferenzRef'
+        properties:
+          name:
+            type: string
+            xml:
+              attribute: true
+          WerkzeugreferenzRef:
+            type: array
+            items:
+              type: object
+              xml:
+                name: 'WerkzeugreferenzRef'
+              properties:
+                id:
+                  $ref: './Werkzeugreferenz.yaml#/Werkzeugreferenz/properties/id'
+                name:
+                  $ref: './Werkzeugreferenz.yaml#/Werkzeugreferenz/properties/name'
+            xml:
+              wrapped: true
+              name: 'WerkzeugreferenzRefs'
+      xml:
+        wrapped: true
+        name: 'AktivitätZuWerkzeugreferenzRefs'
+    AktivitätZuProduktRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'AktivitätZuProduktRef'
+        properties:
+          name:
+            type: string
+            xml:
+              attribute: true
+          ProduktRef:
+            type: array
+            items:
+              type: object
+              xml:
+                name: 'ProduktRef'
+              properties:
+                id:
+                  $ref: './TailoringProdukt.yaml#/TailoringProdukt/properties/id'
+                name:
+                  $ref: './TailoringProdukt.yaml#/TailoringProdukt/properties/name'
+            xml:
+              wrapped: true
+              name: 'ProduktRefs'
+      xml:
+        wrapped: true
+        name: 'AktivitätZuProduktRefs'

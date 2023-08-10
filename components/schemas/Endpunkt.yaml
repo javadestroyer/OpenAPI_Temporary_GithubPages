@@ -1,0 +1,13 @@
+Endpunkt:
+  allOf:
+    - $ref: './Ablaufpunkt.yaml#/Ablaufpunkt'
+    - type: object
+      xml:
+        name: 'Endpunkt'
+      required:
+        - version
+      properties:
+        version:
+          type: string
+          xml:
+            attribute: true

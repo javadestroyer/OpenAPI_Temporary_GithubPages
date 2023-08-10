@@ -1,0 +1,5 @@
+typeNeinJa:
+  type: string
+  enum:
+    - Nein
+    - Ja

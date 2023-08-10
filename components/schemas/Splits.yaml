@@ -1,0 +1,7 @@
+Splits:
+  type: array
+  items:
+    $ref: './Split.yaml#/Split'
+  xml:
+    wrapped: true
+    name: 'Splits'

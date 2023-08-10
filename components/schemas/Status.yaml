@@ -1,0 +1,13 @@
+Status:
+  type: object
+  required:
+    - code
+    - message
+  properties:
+    code:
+      type: string
+    message:
+      type: string
+  xml:
+    wrapped: true
+    name: response

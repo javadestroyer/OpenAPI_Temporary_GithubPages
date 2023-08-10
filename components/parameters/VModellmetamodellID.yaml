@@ -1,0 +1,7 @@
+VModellmetamodellID:
+  in: path
+  name: VModellmetamodellID
+  required: true
+  description: the ID of the V-Modellmetamodell
+  schema:
+    $ref: '../schemas/V-Modellmetamodell.yaml#/V-Modellmetamodell/properties/id'

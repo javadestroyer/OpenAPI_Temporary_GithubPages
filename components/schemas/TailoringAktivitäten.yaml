@@ -1,0 +1,7 @@
+TailoringAktivitäten:
+  type: array
+  items:
+    $ref: './TailoringAktivitätOhneNutzdaten.yaml#/TailoringAktivitätOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

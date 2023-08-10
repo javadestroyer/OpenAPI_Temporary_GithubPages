@@ -1,0 +1,22 @@
+get:
+  description: returns a specific Wert
+  tags:
+    - Einstieg
+  parameters:
+    - $ref: '../components/parameters/VModellmetamodellID.yaml#/VModellmetamodellID'
+    - $ref: '../components/parameters/VModellvarianteID.yaml#/VModellvarianteID'
+    - $ref: '../components/parameters/ProjektmerkmalID.yaml#/ProjektmerkmalID'
+    - $ref: '../components/parameters/WertID.yaml#/WertID'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Wert.yaml#/Wert'
+    default:
+      description: Unexpected error
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Error.yaml#/Error'

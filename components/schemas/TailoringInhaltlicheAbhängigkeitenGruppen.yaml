@@ -1,0 +1,7 @@
+TailoringInhaltlicheAbhängigkeitenGruppen:
+  type: array
+  items:
+    $ref: './TailoringInhaltlicheAbhängigkeitenGruppeOhneNutzdaten.yaml#/TailoringInhaltlicheAbhängigkeitenGruppeOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

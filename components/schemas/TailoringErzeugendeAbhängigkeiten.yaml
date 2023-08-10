@@ -1,0 +1,7 @@
+TailoringErzeugendeAbhängigkeiten:
+  type: array
+  items:
+    $ref: './TailoringErzeugendeAbhängigkeitOhneNutzdaten.yaml#/TailoringErzeugendeAbhängigkeitOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

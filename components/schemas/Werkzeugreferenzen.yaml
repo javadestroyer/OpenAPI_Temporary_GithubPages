@@ -1,0 +1,7 @@
+Werkzeugreferenzen:
+  type: array
+  items:
+    $ref: './WerkzeugreferenzOhneNutzdaten.yaml#/WerkzeugreferenzOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

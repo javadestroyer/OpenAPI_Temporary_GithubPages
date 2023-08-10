@@ -1,0 +1,45 @@
+ThemaOhneNutzdaten:
+  type: object
+  xml:
+    name: 'Thema'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    TextbausteinRef:
+      type: object
+      nullable: true
+      xml:
+        name: 'TextbausteinRef'
+      properties:
+        id:
+          $ref: './Textbaustein.yaml#/Textbaustein/properties/id'
+        name:
+          $ref: './Textbaustein.yaml#/Textbaustein/properties/name'
+    Unterthema:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Unterthema'
+        properties:
+          id:
+            $ref: './Unterthema.yaml#/Unterthema/properties/id'
+          name:
+            $ref: './Unterthema.yaml#/Unterthema/properties/name'
+      xml:
+        wrapped: true
+        name: 'Unterthemen'

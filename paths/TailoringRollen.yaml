@@ -1,0 +1,23 @@
+get:
+  description: Returns the Rollen of the tailoring
+  tags:
+    - Tailoring Logik
+  parameters:
+    - $ref: '../components/parameters/VModellmetamodellID.yaml#/VModellmetamodellID'
+    - $ref: '../components/parameters/VModellvarianteID.yaml#/VModellvarianteID'
+    - $ref: '../components/parameters/ProjekttypID.yaml#/ProjekttypID'
+    - $ref: '../components/parameters/ProjekttypvarianteID.yaml#/ProjekttypvarianteID'
+    - $ref: '../components/parameters/ProjketmerkmaleQuery.yaml#/ProjketmerkmaleQuery'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/TailoringRollen.yaml#/TailoringRollen'
+    default:
+      description: Unexpected error
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Error.yaml#/Error'

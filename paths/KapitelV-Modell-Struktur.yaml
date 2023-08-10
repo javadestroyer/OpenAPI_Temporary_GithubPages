@@ -1,0 +1,23 @@
+get:
+  description: >-
+    returns a specific Kapitel
+  tags:
+    - Einstieg
+  parameters:
+    - $ref: '../components/parameters/VModellmetamodellID.yaml#/VModellmetamodellID'
+    - $ref: '../components/parameters/VModellvarianteID.yaml#/VModellvarianteID'
+    - $ref: '../components/parameters/V-Modell-StrukturID.yaml#/V-Modell-StrukturID'
+    - $ref: '../components/parameters/KapitelID.yaml#/KapitelID'
+  responses:
+    '200':
+      description: Successfully returns
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Kapitel.yaml#/Kapitel'
+    default:
+      description: Unexpected error
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Error.yaml#/Error'

@@ -1,0 +1,7 @@
+Methodenreferenzen:
+  type: array
+  items:
+    $ref: './MethodenreferenzOhneNutzdaten.yaml#/MethodenreferenzOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

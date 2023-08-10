@@ -1,0 +1,7 @@
+TailoringStrukturabhängigkeiten:
+  type: array
+  items:
+    $ref: './TailoringStrukturabhängigkeitOhneNutzdaten.yaml#/TailoringStrukturabhängigkeitOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

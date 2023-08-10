@@ -1,0 +1,35 @@
+V-ModellreleaseOhneNutzdaten:
+  type: object
+  xml:
+    name: 'V-Modellrelease'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    V-Modellvariante:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'V-Modellvariante'
+        properties:
+          id:
+            $ref: './V-Modellvariante.yaml#/V-Modellvariante/properties/id'
+          name:
+            $ref: './V-Modellvariante.yaml#/V-Modellvariante/properties/name'
+      xml:
+        wrapped: true
+        name: 'V-Modellvarianten'

@@ -1,0 +1,325 @@
+TailoringProdukt:
+  type: object
+  xml:
+    name: 'Produkt'
+  required:
+    - id
+    - version
+    - name
+    - Initial
+    - Extern
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    Initial:
+      $ref: './typeNeinJaAttribute.yaml#/typeNeinJaAttribute'
+    Extern:
+      $ref: './typeNeinJaAttribute.yaml#/typeNeinJaAttribute'
+    Produktvorlage:
+      $ref: './typeNeinJaAttribute.yaml#/typeNeinJaAttribute'
+    Nummer:
+      type: integer
+    SchnittstellenQuellproduktRef:
+      type: object
+      nullable: true
+      xml:
+        name: 'SchnittstellenQuellproduktRef'
+      properties:
+        id:
+          $ref: './TailoringProdukt.yaml#/TailoringProdukt/properties/id'
+        name:
+          $ref: './TailoringProdukt.yaml#/TailoringProdukt/properties/name'
+    TextbausteinRef:
+      type: object
+      nullable: true
+      xml:
+        name: 'TextbausteinRef'
+      properties:
+        id:
+          $ref: './Textbaustein.yaml#/Textbaustein/properties/id'
+        name:
+          $ref: './Textbaustein.yaml#/Textbaustein/properties/name'
+    Sinn_und_Zweck:
+      $ref: './typeHtml.yaml#/typeHtml'
+    RolleVerantwortetProduktRef:
+      type: object
+      xml:
+        name: 'RolleVerantwortetProduktRef'
+      properties:
+        name:
+          type: string
+          xml:
+            attribute: true
+        RolleRef:
+          type: object
+          xml:
+            name: 'RolleRef'
+          properties:
+            id:
+              $ref: './TailoringRolle.yaml#/TailoringRolle/properties/id'
+            name:
+              $ref: './TailoringRolle.yaml#/TailoringRolle/properties/name'
+    RolleWirktMitBeiProduktRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'RolleWirktMitBeiProduktRef'
+        properties:
+          name:
+            type: string
+            xml:
+              attribute: true
+          RolleRef:
+            type: array
+            items:
+              type: object
+              xml:
+                name: 'RolleRef'
+              properties:
+                id:
+                  $ref: './TailoringRolle.yaml#/TailoringRolle/properties/id'
+                name:
+                  $ref: './TailoringRolle.yaml#/TailoringRolle/properties/name'
+                IstUnverzichtbar:
+                  $ref: './typeNeinJa.yaml#/typeNeinJa'
+            xml:
+              wrapped: true
+              name: 'RolleRefs'
+      xml:
+        wrapped: true
+        name: 'RolleWirktMitBeiProduktRefs'
+    ProduktZuEntscheidungspunktRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'ProduktZuEntscheidungspunktRef'
+        properties:
+          name:
+            type: string
+            xml:
+              attribute: true
+          EntscheidungspunktRef:
+            type: array
+            items:
+              type: object
+              xml:
+                name: 'EntscheidungspunktRef'
+              properties:
+                id:
+                  $ref: './Entscheidungspunkt.yaml#/Entscheidungspunkt/properties/id'
+                name:
+                  $ref: './Entscheidungspunkt.yaml#/Entscheidungspunkt/properties/name'
+            xml:
+              wrapped: true
+              name: 'EntscheidungspunktRefs'
+      xml:
+        wrapped: true
+        name: 'ProduktZuEntscheidungspunktRefs'
+    ThemaZuProduktRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'ThemaZuProduktRef'
+        properties:
+          name:
+            type: string
+            xml:
+              attribute: true
+          ThemaRef:
+            type: array
+            items:
+              type: object
+              xml:
+                name: 'ThemaRef'
+              properties:
+                id:
+                  $ref: './Thema.yaml#/Thema/properties/id'
+                name:
+                  $ref: './Thema.yaml#/Thema/properties/name'
+            xml:
+              wrapped: true
+              name: 'ThemaRefs'
+      xml:
+        wrapped: true
+        name: 'ThemaZuProduktRefs'
+    ExterneKopiervorlageZuProduktRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'ExterneKopiervorlageZuProduktRef'
+        properties:
+          name:
+            type: string
+            xml:
+              attribute: true
+          ExterneKopiervorlageRef:
+            type: array
+            items:
+              type: object
+              xml:
+                name: 'ExterneKopiervorlageRef'
+              properties:
+                id:
+                  $ref: './ExterneKopiervorlage.yaml#/ExterneKopiervorlage/properties/id'
+                name:
+                  $ref: './ExterneKopiervorlage.yaml#/ExterneKopiervorlage/properties/name'
+            xml:
+              wrapped: true
+              name: 'ExterneKopiervorlageRefs'
+      xml:
+        wrapped: true
+        name: 'ExterneKopiervorlageZuProduktRefs'
+    AktivitätZuProduktRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'AktivitätZuProduktRef'
+        properties:
+          name:
+            type: string
+            xml:
+              attribute: true
+          AktivitätRef:
+            type: array
+            items:
+              type: object
+              xml:
+                name: 'AktivitätRef'
+              properties:
+                id:
+                  $ref: './Aktivität.yaml#/Aktivität/properties/id'
+                name:
+                  $ref: './Aktivität.yaml#/Aktivität/properties/name'
+            xml:
+              wrapped: true
+              name: 'AktivitätRefs'
+      xml:
+        wrapped: true
+        name: 'AktivitätZuProduktRefs'
+    InhaltlicheAbhängigkeitenGruppeZuProduktRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'InhaltlicheAbhängigkeitenGruppeZuProduktRef'
+        properties:
+          name:
+            type: string
+            xml:
+              attribute: true
+          InhaltlicheAbhängigkeitenGruppeRef:
+            type: array
+            items:
+              type: object
+              xml:
+                name: 'InhaltlicheAbhängigkeitenGruppeRef'
+              properties:
+                id:
+                  $ref: './TailoringInhaltlicheAbhängigkeitenGruppe.yaml#/TailoringInhaltlicheAbhängigkeitenGruppe/properties/id'
+                name:
+                  $ref: './TailoringInhaltlicheAbhängigkeitenGruppe.yaml#/TailoringInhaltlicheAbhängigkeitenGruppe/properties/name'
+            xml:
+              wrapped: true
+              name: 'InhaltlicheAbhängigkeitenGruppeRefs'
+      xml:
+        wrapped: true
+        name: 'InhaltlicheAbhängigkeitenGruppeZuProduktRefs'
+    ErzeugendeAbhängigkeitzuProduktRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'ErzeugendeAbhängigkeitzuProduktRef'
+        properties:
+          name:
+            type: string
+            xml:
+              attribute: true
+          ErzeugendeAbhängigkeitRef:
+            type: array
+            items:
+              type: object
+              xml:
+                name: 'ErzeugendeAbhängigkeitRef'
+              properties:
+                id:
+                  $ref: './TailoringErzeugendeAbhängigkeit.yaml#/TailoringErzeugendeAbhängigkeit/properties/id'
+                name:
+                  $ref: './TailoringErzeugendeAbhängigkeit.yaml#/TailoringErzeugendeAbhängigkeit/properties/name'
+            xml:
+              wrapped: true
+              name: 'ErzeugendeAbhängigkeitRefs'
+      xml:
+        wrapped: true
+        name: 'ErzeugendeAbhängigkeitzuProduktRefs'
+    StrukturabhängigkeitZuGanzesProduktRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'StrukturabhängigkeitZuGanzesProduktRef'
+        properties:
+          name:
+            type: string
+            xml:
+              attribute: true
+          StrukturabhängigkeitRef:
+            type: array
+            items:
+              type: object
+              xml:
+                name: 'StrukturabhängigkeitRef'
+              properties:
+                id:
+                  $ref: './TailoringStrukturabhängigkeit.yaml#/TailoringStrukturabhängigkeit/properties/id'
+                name:
+                  $ref: './TailoringStrukturabhängigkeit.yaml#/TailoringStrukturabhängigkeit/properties/name'
+            xml:
+              wrapped: true
+              name: 'StrukturabhängigkeitRefs'
+      xml:
+        wrapped: true
+        name: 'StrukturabhängigkeitZuGanzesProduktRefs'
+    StrukturabhängigkeitZuTeilProduktRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'StrukturabhängigkeitZuTeilProduktRef'
+        properties:
+          name:
+            type: string
+            xml:
+              attribute: true
+          ProduktRef:
+            type: array
+            items:
+              type: object
+              xml:
+                name: 'StrukturabhängigkeitRef'
+              properties:
+                id:
+                  $ref: './TailoringStrukturabhängigkeit.yaml#/TailoringStrukturabhängigkeit/properties/id'
+                name:
+                  $ref: './TailoringStrukturabhängigkeit.yaml#/TailoringStrukturabhängigkeit/properties/name'
+            xml:
+              wrapped: true
+              name: 'StrukturabhängigkeitRefs'
+      xml:
+        wrapped: true
+        name: 'StrukturabhängigkeitZuTeilProduktRefs'

@@ -1,0 +1,7 @@
+KapitelPlural:
+  type: array
+  items:
+    $ref: './KapitelOhneNutzdaten.yaml#/KapitelOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

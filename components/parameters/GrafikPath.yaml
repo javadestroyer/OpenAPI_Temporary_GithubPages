@@ -1,0 +1,5 @@
+GrafikPath:
+  in: path
+  name: GrafikPath
+  schema:
+    type: string

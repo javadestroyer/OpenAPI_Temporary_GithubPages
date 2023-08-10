@@ -1,0 +1,7 @@
+ProjekttypID:
+  in: path
+  name: ProjekttypID
+  required: true
+  description: the ID of the Projekttyp
+  schema:
+    $ref: '../schemas/Projekttyp.yaml#/Projekttyp/properties/id'

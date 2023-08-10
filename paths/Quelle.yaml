@@ -1,0 +1,22 @@
+get:
+  description: >-
+    returns a specific Quelle
+  tags:
+    - Einstieg
+  parameters:
+    - $ref: '../components/parameters/VModellmetamodellID.yaml#/VModellmetamodellID'
+    - $ref: '../components/parameters/VModellvarianteID.yaml#/VModellvarianteID'
+    - $ref: '../components/parameters/QuelleID.yaml#/QuelleID'
+  responses:
+    '200':
+      description: Successfully returns
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Quelle.yaml#/Quelle'
+    default:
+      description: Unexpected error
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Error.yaml#/Error'

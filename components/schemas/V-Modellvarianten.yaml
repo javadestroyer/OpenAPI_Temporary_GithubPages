@@ -1,0 +1,7 @@
+V-Modellvarianten:
+  type: array
+  items:
+    $ref: './V-ModellvarianteOhneNutzdaten.yaml#/V-ModellvarianteOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

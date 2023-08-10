@@ -1,0 +1,7 @@
+AblaufbausteinpunktID:
+  in: path
+  name: AblaufbausteinpunktID
+  required: true
+  description: the ID of the Ablaufbausteinpunkt
+  schema:
+    $ref: '../schemas/Ablaufpunkt.yaml#/Ablaufpunkt/properties/id'

@@ -1,0 +1,7 @@
+TextbausteinID:
+  in: path
+  name: TextbausteinID
+  required: true
+  description: the ID of the Textbaustein
+  schema:
+    $ref: '../schemas/Textbaustein.yaml#/Textbaustein/properties/id'

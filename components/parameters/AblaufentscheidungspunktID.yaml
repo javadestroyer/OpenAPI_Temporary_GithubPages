@@ -1,0 +1,7 @@
+AblaufentscheidungspunktID:
+  in: path
+  name: AblaufentscheidungspunktID
+  required: true
+  description: the ID of the Ablaufentscheidungspunkt
+  schema:
+    $ref: '../schemas/Ablaufpunkt.yaml#/Ablaufpunkt/properties/id'

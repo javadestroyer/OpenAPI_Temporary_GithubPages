@@ -1,0 +1,25 @@
+get:
+  description: >-
+    returns a Voratiloring with the given id of a specific
+    V-Modellvariante of a specific V-Modellrelease of a specific
+    V-Modellmetamodell or null
+  tags:
+    - Löschen
+  parameters:
+    - $ref: '../components/parameters/VModellmetamodellID.yaml#/VModellmetamodellID'
+    - $ref: '../components/parameters/VModellreleaseID.yaml#/VModellreleaseID'
+    - $ref: '../components/parameters/VModellvarianteID.yaml#/VModellvarianteID'
+    - $ref: '../components/parameters/VortailoringID.yaml#/VortailoringID'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Vortailoring.yaml#/Vortailoring'
+    default:
+      description: Unexpected error
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Error.yaml#/Error'

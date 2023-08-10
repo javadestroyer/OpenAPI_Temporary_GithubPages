@@ -1,0 +1,49 @@
+TailoringExterneKopiervorlageOhneNutzdaten:
+  type: object
+  xml:
+    name: 'ExterneKopiervorlage'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    ExterneKopiervorlageZuProduktRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'ExterneKopiervorlageZuProduktRef'
+        properties:
+          name:
+            type: string
+            xml:
+              attribute: true
+          ProduktRef:
+            type: array
+            items:
+              type: object
+              xml:
+                name: 'ProduktRef'
+              properties:
+                id:
+                  $ref: './TailoringProdukt.yaml#/TailoringProdukt/properties/id'
+                name:
+                  $ref: './TailoringProdukt.yaml#/TailoringProdukt/properties/name'
+            xml:
+              wrapped: true
+              name: 'ProduktRefs'
+      xml:
+        wrapped: true
+        name: 'ExterneKopiervorlageZuProduktRefs'

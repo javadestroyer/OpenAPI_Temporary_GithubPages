@@ -1,0 +1,49 @@
+VortailoringOhneNutzDaten:
+  type: object
+  xml:
+    name: 'Vortailoring'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    Ausschluss:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Ausschluss'
+        properties:
+          id:
+            $ref: './Ausschluss.yaml#/Ausschluss/properties/id'
+          name:
+            $ref: './Ausschluss.yaml#/Ausschluss/properties/name'
+      xml:
+        wrapped: true
+        name: 'Ausschlüsse'
+    SelektiverAusschluss:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'SelektiverAusschluss'
+        properties:
+          id:
+            $ref: './SelektiverAusschluss.yaml#/SelektiverAusschluss/properties/id'
+          name:
+            $ref: './SelektiverAusschluss.yaml#/SelektiverAusschluss/properties/name'
+      xml:
+        wrapped: true
+        name: 'SelektiverAusschlüsse'

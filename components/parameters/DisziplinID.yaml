@@ -1,0 +1,7 @@
+DisziplinID:
+  in: path
+  name: DisziplinID
+  required: true
+  description: the ID of the Disziplin
+  schema:
+    $ref: '../schemas/TailoringDisziplin.yaml#/TailoringDisziplin/properties/id'

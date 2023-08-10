@@ -1,0 +1,53 @@
+Produkt:
+  type: object
+  xml:
+    name: 'Produkt'
+  required:
+    - id
+    - version
+    - name
+    - Initial
+    - Extern
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    Initial:
+      $ref: './typeNeinJaAttribute.yaml#/typeNeinJaAttribute'
+    Extern:
+      $ref: './typeNeinJaAttribute.yaml#/typeNeinJaAttribute'
+    Produktvorlage:
+      $ref: './typeNeinJaAttribute.yaml#/typeNeinJaAttribute'
+    Nummer:
+      type: integer
+    SchnittstellenQuellproduktRef:
+      type: object
+      nullable: true
+      xml:
+        name: 'SchnittstellenQuellproduktRef'
+      properties:
+        id:
+          $ref: './Produkt.yaml#/Produkt/properties/id'
+        name:
+          $ref: './Produkt.yaml#/Produkt/properties/name'
+    TextbausteinRef:
+      type: object
+      nullable: true
+      xml:
+        name: 'TextbausteinRef'
+      properties:
+        id:
+          $ref: './Textbaustein.yaml#/Textbaustein/properties/id'
+        name:
+          $ref: './Textbaustein.yaml#/Textbaustein/properties/name'
+    Sinn_und_Zweck:
+      $ref: './typeHtml.yaml#/typeHtml'

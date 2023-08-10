@@ -1,0 +1,21 @@
+RolleOhneNutzdaten:
+  type: object
+  xml:
+    name: 'Rolle'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true

@@ -1,0 +1,7 @@
+Übergänge:
+  type: array
+  items:
+    $ref: './ÜbergangOhneNutzdaten.yaml#/ÜbergangOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: 'Übergänge'

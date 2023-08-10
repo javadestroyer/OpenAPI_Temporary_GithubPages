@@ -1,0 +1,7 @@
+Joins:
+  type: array
+  items:
+    $ref: './Join.yaml#/Join'
+  xml:
+    wrapped: true
+    name: 'Joins'

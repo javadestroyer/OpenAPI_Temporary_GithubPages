@@ -1,0 +1,3 @@
+Vielfachheit:
+  type: string
+  example: "1..*"

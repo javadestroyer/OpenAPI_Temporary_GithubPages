@@ -1,0 +1,22 @@
+get:
+  description: >-
+    returns a specific V-Modellvariante of a specific V-Modellrelease of a
+    specific V-Modellmetamodell
+  tags:
+    - Einstieg
+  parameters:
+    - $ref: '../components/parameters/VModellmetamodellID.yaml#/VModellmetamodellID'
+    - $ref: '../components/parameters/VModellvarianteID.yaml#/VModellvarianteID'
+  responses:
+    '200':
+      description: Successfully returns
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/V-Modellvariante.yaml#/V-Modellvariante'
+    default:
+      description: Unexpected error
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Error.yaml#/Error'

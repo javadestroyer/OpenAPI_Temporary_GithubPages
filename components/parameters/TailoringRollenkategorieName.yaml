@@ -1,0 +1,7 @@
+TailoringRollenkategorieName:
+  in: path
+  name: RollenkategorieName
+  required: true
+  description: the name of Rollenkategorie
+  schema:
+    $ref: '../schemas/TailoringRollenkategorie.yaml#/TailoringRollenkategorie/properties/name'

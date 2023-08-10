@@ -1,0 +1,7 @@
+ProduktID:
+  in: path
+  name: ProduktID
+  required: true
+  description: the ID of the Produkt
+  schema:
+    $ref: '../schemas/Produkt.yaml#/Produkt/properties/id'

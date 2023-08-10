@@ -1,0 +1,7 @@
+V-Modellreleases:
+  type: array
+  items:
+    $ref: './V-ModellreleaseOhneNutzdaten.yaml#/V-ModellreleaseOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

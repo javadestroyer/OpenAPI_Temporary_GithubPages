@@ -1,0 +1,7 @@
+SelektiverAusschlüsse:
+  type: array
+  items:
+    $ref: './SelektiverAusschlussOhneNutzDaten.yaml#/SelektiverAusschlussOhneNutzDaten'
+  xml:
+    wrapped: true
+    name: response

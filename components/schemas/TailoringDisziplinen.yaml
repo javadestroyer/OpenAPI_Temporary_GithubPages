@@ -1,0 +1,7 @@
+TailoringDisziplinen:
+  type: array
+  items:
+    $ref: './TailoringDisziplinOhneNutzDaten.yaml#/TailoringDisziplinOhneNutzDaten'
+  xml:
+    wrapped: true
+    name: response

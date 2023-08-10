@@ -1,0 +1,34 @@
+V-Modell-TeilOhneNutzdaten:
+  type: object
+  xml:
+    name: 'V-Modell-Teil'
+  required:
+    - id
+    - version
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    Kapitel:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Kapitel'
+        properties:
+          id:
+            $ref: './Kapitel.yaml#/Kapitel/properties/id'
+          titel:
+            $ref: './Kapitel.yaml#/Kapitel/properties/titel'
+      xml:
+        wrapped: true
+        name: 'Kapitel'

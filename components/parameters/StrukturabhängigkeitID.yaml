@@ -1,0 +1,7 @@
+StrukturabhängigkeitID:
+  in: path
+  name: StrukturabhängigkeitID
+  required: true
+  description: the ID of the Strukturabhängigkeit
+  schema:
+    $ref: '../schemas/TailoringStrukturabhängigkeit.yaml#/TailoringStrukturabhängigkeit/properties/id'

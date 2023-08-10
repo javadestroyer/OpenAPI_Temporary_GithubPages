@@ -1,0 +1,7 @@
+AblaufentscheidungspunkteOhneNutzdaten:
+  type: array
+  items:
+    $ref: './AblaufentscheidungspunktOhneNutzdaten.yaml#/AblaufentscheidungspunktOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: 'Ablaufentscheidungspunkte'

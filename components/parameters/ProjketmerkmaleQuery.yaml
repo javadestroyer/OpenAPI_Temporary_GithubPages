@@ -1,0 +1,32 @@
+ProjketmerkmaleQuery:
+  in: query
+  name: ProjektmerkmaleIDs
+  schema:
+    type: object
+    # If the parameter values are of specific type, e.g. string:
+    additionalProperties:
+
+      $ref: '../schemas/Projektmerkmal.yaml#/Projektmerkmal/properties/id'
+    # If the parameter values can be of different types
+    # (e.g. string, number, boolean, ...)
+    # additionalProperties: true
+
+    #--------------------------------
+    #Fragen:
+    # type: Object
+    # properties:
+    # 32423489x13801:  # <-- ID eines Projektmerkmales -- Projektmerkmal1
+    #   type: string
+    # $ref: '#/components/schemas/Wert/properties/id
+    # 5499y35i9q802:  # <-- ID eines Projektmerkmales  -- Projektmerkmal2
+    #   type: string
+    # $ref: '#/components/schemas/Wert/properties/id
+
+    #../?Projektmerkmal1=WertID&Projektmerkmal2=WertID
+    #---------------------------------
+
+  # `style: form` and `explode: true` is the default serialization method
+  # for query parameters, so these keywords can be omitted
+  # ../?ProjektmerkmaleIDs[ProjketmerkmalID]=""&ProjektmerkmaleIDs[ProjketmerkmalID] #Deepobject
+  style: form
+  explode: true

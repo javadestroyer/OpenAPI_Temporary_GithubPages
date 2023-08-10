@@ -1,0 +1,7 @@
+Quellen:
+  type: array
+  items:
+    $ref: './QuelleOhneNutzdaten.yaml#/QuelleOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

@@ -1,0 +1,58 @@
+Ablaufbaustein:
+  type: object
+  xml:
+    name: 'Ablaufbaustein'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    Beschreibung:
+      $ref: './typeHtml.yaml#/typeHtml'
+    Abkürzung:
+      type: string
+    Übergang:
+      type: array
+      items:
+        $ref: './Übergang.yaml#/Übergang'
+      xml:
+        wrapped: true
+        name: 'Übergänge'
+    Ablaufpunkt:
+      type: object
+      xml:
+        name: 'Ablaufpunkte'
+      properties:
+        Startpunkt:
+          $ref: './Startpunkt.yaml#/Startpunkt'
+        Endpunkt:
+          $ref: './Endpunkt.yaml#/Endpunkt'
+        Ablaufpunkte:
+          type: array
+          items:
+            anyOf:
+              - $ref: './Splits.yaml#/Splits'
+              - $ref: './Joins.yaml#/Joins'
+              - $ref: './Ablaufbausteinpunkte.yaml#/Ablaufbausteinpunkte'
+              - $ref: './Ablaufentscheidungspunkte.yaml#/Ablaufentscheidungspunkte'
+    AblaubausteinspezifikationRef:
+      type: object
+      xml:
+        name: 'AblaubausteinspezifikationRef'
+      properties:
+        id:
+          $ref: './Ablaufbausteinspezifikation.yaml#/Ablaufbausteinspezifikation/properties/id'
+        name:
+          $ref: './Ablaufbausteinspezifikation.yaml#/Ablaufbausteinspezifikation/properties/name'

@@ -1,0 +1,24 @@
+get:
+  description: >-
+    returns a Projekttypvariante with the given id of a specific
+    V-Modellvariante of a specific V-Modellrelease of a specific
+    V-Modellmetamodell
+  tags:
+    - Einstieg
+  parameters:
+    - $ref: '../components/parameters/VModellmetamodellID.yaml#/VModellmetamodellID'
+    - $ref: '../components/parameters/VModellvarianteID.yaml#/VModellvarianteID'
+    - $ref: '../components/parameters/ProjekttypvarianteID.yaml#/ProjekttypvarianteID'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Projekttypvariante.yaml#/Projekttypvariante'
+    default:
+      description: Unexpected error
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Error.yaml#/Error'

@@ -1,0 +1,31 @@
+ÜbergangOhneNutzdaten:
+  type: object
+  xml:
+    name: 'Übergang'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    Quelle:
+      type: object
+      properties:
+        id:
+          $ref: './Ablaufpunkt.yaml#/Ablaufpunkt/properties/id'
+    Ziel:
+      type: object
+      properties:
+        id:
+          $ref: './Ablaufpunkt.yaml#/Ablaufpunkt/properties/id'

@@ -1,0 +1,201 @@
+V-ModellvarianteOhneNutzdaten:
+  type: object
+  xml:
+    name: 'V-Modellvariante'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    VorgängerRef:
+      type: object
+      nullable: true
+      xml:
+        name: 'VorgängerRef'
+      properties:
+        id:
+          $ref: './V-Modellvariante.yaml#/V-Modellvariante/properties/id'
+        name:
+          $ref: './V-Modellvariante.yaml#/V-Modellvariante/properties/name'
+        art:
+          type: string
+    Projekttyp:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Projekttyp'
+        properties:
+          id:
+            $ref: './Projekttyp.yaml#/Projekttyp/properties/id'
+          name:
+            $ref: './Projekttyp.yaml#/Projekttyp/properties/name'
+      xml:
+        wrapped: true
+        name: 'Projekttypen'
+    Projekttypvariante:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Projekttypvariante'
+        properties:
+          id:
+            $ref: './Projekttypvariante.yaml#/Projekttypvariante/properties/id'
+          name:
+            $ref: './Projekttypvariante.yaml#/Projekttypvariante/properties/name'
+      xml:
+        wrapped: true
+        name: 'Projekttypvarianten'
+    Projektmerkmal:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Projektmerkmal'
+        properties:
+          id:
+            $ref: './Projektmerkmal.yaml#/Projektmerkmal/properties/id'
+          name:
+            $ref: './Projektmerkmal.yaml#/Projektmerkmal/properties/name'
+      xml:
+        wrapped: true
+        name: 'Projektmerkmale'
+    Ablaufbausteinspezifikation:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Ablaufbausteinspezifikation'
+        properties:
+          id:
+            $ref: './Ablaufbausteinspezifikation.yaml#/Ablaufbausteinspezifikation/properties/id'
+          name:
+            $ref: './Ablaufbausteinspezifikation.yaml#/Ablaufbausteinspezifikation/properties/name'
+      xml:
+        wrapped: true
+        name: 'Ablaufbausteinspezifikationen'
+    Ablaufbaustein:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Ablaufbaustein'
+        properties:
+          id:
+            $ref: './TailoringAblaufbaustein.yaml#/Ablaufbaustein/properties/id'
+          name:
+            $ref: './TailoringAblaufbaustein.yaml#/Ablaufbaustein/properties/name'
+      xml:
+        wrapped: true
+        name: 'Ablaufbausteine'
+    Entscheidungspunkt:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Entscheidungspunkt'
+        properties:
+          id:
+            $ref: './Entscheidungspunkt.yaml#/Entscheidungspunkt/properties/id'
+          name:
+            $ref: './Entscheidungspunkt.yaml#/Entscheidungspunkt/properties/name'
+      xml:
+        wrapped: true
+        name: 'Entscheidungspunkte'
+    Rolle:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Rolle'
+        properties:
+          id:
+            $ref: './Rolle.yaml#/Rolle/properties/id'
+          name:
+            $ref: './Rolle.yaml#/Rolle/properties/name'
+      xml:
+        wrapped: true
+        name: 'Rollen'
+    Vorgehensbaustein:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Vorgehensbaustein'
+        properties:
+          id:
+            $ref: './Vorgehensbaustein.yaml#/Vorgehensbaustein/properties/id'
+          name:
+            $ref: './Vorgehensbaustein.yaml#/Vorgehensbaustein/properties/name'
+      xml:
+        wrapped: true
+        name: 'Vorgehensbausteine'
+    Werkzeugreferenz:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Werkzeugreferenz'
+        properties:
+          id:
+            $ref: './Werkzeugreferenz.yaml#/Werkzeugreferenz/properties/id'
+          name:
+            $ref: './Werkzeugreferenz.yaml#/Werkzeugreferenz/properties/name'
+      xml:
+        wrapped: true
+        name: 'Werkzeugreferenzen'
+    Methodenreferenz:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Methodenreferenz'
+        properties:
+          id:
+            $ref: './Methodenreferenz.yaml#/Methodenreferenz/properties/id'
+          name:
+            $ref: './Methodenreferenz.yaml#/Methodenreferenz/properties/name'
+      xml:
+        wrapped: true
+        name: 'Methodenreferenzen'
+    Textbaustein:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Textbaustein'
+        properties:
+          id:
+            $ref: './Textbaustein.yaml#/Textbaustein/properties/id'
+          name:
+            $ref: './Textbaustein.yaml#/Textbaustein/properties/name'
+      xml:
+        wrapped: true
+        name: 'Textbausteine'
+    Quelle:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Quelle'
+        properties:
+          id:
+            $ref: './Quelle.yaml#/Quelle/properties/id'
+          name:
+            $ref: './Quelle.yaml#/Quelle/properties/name'
+      xml:
+        wrapped: true
+        name: 'Quellen'

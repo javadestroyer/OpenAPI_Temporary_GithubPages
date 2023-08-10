@@ -1,0 +1,7 @@
+TailoringEntscheidungspunkte:
+  type: array
+  items:
+    $ref: './TailoringEntscheidungspunktOhneNutzdaten.yaml#/TailoringEntscheidungspunktOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

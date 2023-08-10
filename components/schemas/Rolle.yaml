@@ -1,0 +1,31 @@
+Rolle:
+  type: object
+  xml:
+    name: 'Rolle'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    Rollenkategorie:
+      $ref: './typeRollenKlasse.yaml#/typeRollenKlasse'
+    Beschreibung:
+      $ref: './typeHtml.yaml#/typeHtml'
+    Aufgaben_und_Befugnisse:
+      $ref: './typeHtml.yaml#/typeHtml'
+    Fähigkeitsprofil:
+      $ref: './typeHtml.yaml#/typeHtml'
+    Rollenbesetzung:
+      $ref: './typeHtml.yaml#/typeHtml'

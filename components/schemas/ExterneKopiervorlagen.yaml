@@ -1,0 +1,7 @@
+ExterneKopiervorlagen:
+  type: array
+  items:
+    $ref: './ExterneKopiervorlageOhneNutzdaten.yaml#/ExterneKopiervorlageOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

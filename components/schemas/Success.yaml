@@ -1,0 +1,10 @@
+Success:
+  type: object
+  xml:
+    name: 'Success'
+  required:
+    - code
+    - message
+  properties:
+    code:
+      type: string

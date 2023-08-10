@@ -1,0 +1,7 @@
+ExterneKopiervorlageID:
+  in: path
+  name: ExterneKopiervorlageID
+  required: true
+  description: the ID of the ExterneKopiervorlage
+  schema:
+    $ref: '../schemas/ExterneKopiervorlage.yaml#/ExterneKopiervorlage/properties/id'

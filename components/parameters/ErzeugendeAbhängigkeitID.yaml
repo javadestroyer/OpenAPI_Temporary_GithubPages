@@ -1,0 +1,7 @@
+ErzeugendeAbhängigkeitID:
+  in: path
+  name: ErzeugendeAbhängigkeitID
+  required: true
+  description: the ID of the ErzeugendeAbhängigkeit
+  schema:
+    $ref: '../schemas/TailoringErzeugendeAbhängigkeit.yaml#/TailoringErzeugendeAbhängigkeit/properties/id'

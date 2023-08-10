@@ -1,0 +1,7 @@
+MethodenreferenzID:
+  in: path
+  name: MethodenreferenzID
+  required: true
+  description: the ID of the Methodenreferenz
+  schema:
+    $ref: '../schemas/Methodenreferenz.yaml#/Methodenreferenz/properties/id'

@@ -1,0 +1,35 @@
+MethodenreferenzOhneNutzdaten:
+  type: object
+  xml:
+    name: 'Methodenreferenz'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    QuelleRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'QuelleRef'
+        properties:
+          id:
+            $ref: './Quelle.yaml#/Quelle/properties/id'
+          name:
+            $ref: './Quelle.yaml#/Quelle/properties/name'
+      xml:
+        wrapped: true
+        name: 'QuelleRefs'

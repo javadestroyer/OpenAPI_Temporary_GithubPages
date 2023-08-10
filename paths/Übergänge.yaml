@@ -1,0 +1,22 @@
+get:
+  description: returns all Übergänge
+  tags:
+    - Umbau zu Tailoring
+  parameters:
+    - $ref: '../components/parameters/VModellmetamodellID.yaml#/VModellmetamodellID'
+    - $ref: '../components/parameters/VModellvarianteID.yaml#/VModellvarianteID'
+    - $ref: '../components/parameters/AblaufbausteinID.yaml#/AblaufbausteinID'
+
+  responses:
+    '200':
+      description: Success
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Übergänge.yaml#/Übergänge'
+    default:
+      description: Unexpected error
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Error.yaml#/Error'

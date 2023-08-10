@@ -1,0 +1,64 @@
+Tailoring:
+  type: object
+  xml:
+    name: 'Tailoring'
+  properties:
+    id:
+      $ref: './V-Modellvariante.yaml#/V-Modellvariante/properties/id'
+    version:
+      $ref: './V-Modellvariante.yaml#/V-Modellvariante/properties/version'
+    name:
+      $ref: './V-Modellvariante.yaml#/V-Modellvariante/properties/name'
+    Version:
+      $ref: './V-Modellvariante.yaml#/V-Modellvariante/properties/Version'
+    Version_intern:
+      $ref: './V-Modellvariante.yaml#/V-Modellvariante/properties/Version_intern'
+    Copyright_kurz:
+      $ref: './V-Modellvariante.yaml#/V-Modellvariante/properties/Copyright_kurz'
+    Copyright_lang:
+      $ref: './V-Modellvariante.yaml#/V-Modellvariante/properties/Copyright_lang'
+    Herausgeber:
+      $ref: './V-Modellvariante.yaml#/V-Modellvariante/properties/Herausgeber'
+    Ansprechpartner:
+      $ref: './V-Modellvariante.yaml#/V-Modellvariante/properties/Ansprechpartner'
+    Erarbeitung:
+      $ref: './V-Modellvariante.yaml#/V-Modellvariante/properties/Erarbeitung'
+    Autoren:
+      $ref: './V-Modellvariante.yaml#/V-Modellvariante/properties/Autoren'
+    Titelseite:
+      $ref: './V-Modellvariante.yaml#/V-Modellvariante/properties/Titelseite'
+    Vorgehensbausteine:
+      type: array
+      items:
+        $ref: './Vorgehensbaustein.yaml#/Vorgehensbaustein'
+      xml:
+        wrapped: true
+        name: 'Vorgehensbausteine'
+    Rollen:
+      type: array
+      items:
+        $ref: './Rolle.yaml#/Rolle'
+      xml:
+        wrapped: true
+        name: 'Rollen'
+    Entscheidungspunkte:
+      type: array
+      items:
+        $ref: './Entscheidungspunkt.yaml#/Entscheidungspunkt'
+      xml:
+        wrapped: true
+        name: 'Entscheidungspunkte'
+    Ablaufbausteine:
+      type: array
+      items:
+        $ref: './TailoringAblaufbaustein.yaml#/Ablaufbaustein'
+      xml:
+        wrapped: true
+        name: 'Ablaufbausteine'
+    Ablaufbausteinspezifikationen:
+      type: array
+      items:
+        $ref: './Ablaufbausteinspezifikation.yaml#/Ablaufbausteinspezifikation'
+      xml:
+        wrapped: true
+        name: 'Ablaufbausteinspezifikationen'

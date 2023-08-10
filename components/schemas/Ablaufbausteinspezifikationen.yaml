@@ -1,0 +1,7 @@
+Ablaufbausteinspezifikationen:
+  type: array
+  items:
+    $ref: './AblaufbausteinspezifikationOhneNutzdaten.yaml#/AblaufbausteinspezifikationOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

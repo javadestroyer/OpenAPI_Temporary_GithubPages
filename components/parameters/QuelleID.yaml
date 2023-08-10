@@ -1,0 +1,7 @@
+QuelleID:
+  in: path
+  name: QuelleID
+  required: true
+  description: the ID of the Quelle
+  schema:
+    $ref: '../schemas/Quelle.yaml#/Quelle/properties/id'

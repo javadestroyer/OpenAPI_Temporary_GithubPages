@@ -1,0 +1,66 @@
+Wert:
+  type: object
+  xml:
+    name: 'Wert'
+    wrapped: true
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    Beschreibung:
+      $ref: './typeHtml.yaml#/typeHtml'
+    VorgehensbausteinRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'VorgehensbausteinRef'
+        properties:
+          id:
+            $ref: './Vorgehensbaustein.yaml#/Vorgehensbaustein/properties/id'
+          name:
+            $ref: './Vorgehensbaustein.yaml#/Vorgehensbaustein/properties/name'
+      xml:
+        wrapped: true
+        name: 'VorgehensbausteinRefs'
+    AblaufbausteinRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'AblaufbausteinRef'
+        properties:
+          id:
+            $ref: './TailoringAblaufbaustein.yaml#/Ablaufbaustein/properties/id'
+          name:
+            $ref: './TailoringAblaufbaustein.yaml#/Ablaufbaustein/properties/name'
+      xml:
+        wrapped: true
+        name: 'AblaufbausteinRefs'
+    AblaufbausteinspezifikationRef:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'AblaufbausteinspezifikationRef'
+        properties:
+          id:
+            $ref: './Ablaufbausteinspezifikation.yaml#/Ablaufbausteinspezifikation/properties/id'
+          name:
+            $ref: './Ablaufbausteinspezifikation.yaml#/Ablaufbausteinspezifikation/properties/name'
+      xml:
+        wrapped: true
+        name: 'AblaufbausteinspezifikationRefs'

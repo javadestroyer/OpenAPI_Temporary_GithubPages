@@ -1,0 +1,22 @@
+get:
+  description: >-
+    returns a specific V-Modell-Struktur with Nutzdaten
+  tags:
+    - Einstieg
+  parameters:
+    - $ref: '../components/parameters/VModellmetamodellID.yaml#/VModellmetamodellID'
+    - $ref: '../components/parameters/VModellvarianteID.yaml#/VModellvarianteID'
+    - $ref: '../components/parameters/V-Modell-StrukturID.yaml#/V-Modell-StrukturID'
+  responses:
+    '200':
+      description: Successfully returns
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/V-Modell-Struktur.yaml#/V-Modell-Struktur'
+    default:
+      description: Unexpected error
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Error.yaml#/Error'

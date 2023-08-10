@@ -1,0 +1,7 @@
+V-Modellmetamodelle:
+  type: array
+  items:
+    $ref: './V-Modellmetamodell.yaml#/V-Modellmetamodell'
+  xml:
+    wrapped: true
+    name: response

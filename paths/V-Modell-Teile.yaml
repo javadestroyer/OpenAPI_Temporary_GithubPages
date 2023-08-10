@@ -1,0 +1,22 @@
+get:
+  description: >-
+    returns a specific Kaptel
+  tags:
+    - New
+  parameters:
+    - $ref: '../components/parameters/VModellmetamodellID.yaml#/VModellmetamodellID'
+    - $ref: '../components/parameters/VModellvarianteID.yaml#/VModellvarianteID'
+    - $ref: '../components/parameters/V-Modell-StrukturID.yaml#/V-Modell-StrukturID'
+  responses:
+    '200':
+      description: Successfully returns
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/V-Modell-Teile.yaml#/V-Modell-Teile'
+    default:
+      description: Unexpected error
+      content:
+        application/xml:
+          schema:
+            $ref: '../components/schemas/Error.yaml#/Error'

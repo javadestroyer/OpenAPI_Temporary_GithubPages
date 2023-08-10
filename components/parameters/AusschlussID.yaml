@@ -1,0 +1,7 @@
+AusschlussID:
+  in: path
+  name: AusschlussID
+  required: true
+  description: the ID of the Ausschluss
+  schema:
+    $ref: '../schemas/Ausschluss.yaml#/Ausschluss/properties/id'

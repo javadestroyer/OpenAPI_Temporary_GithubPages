@@ -1,0 +1,12 @@
+Error:
+  type: object
+  xml:
+    name: 'error'
+  required:
+    - code
+    - message
+  properties:
+    code:
+      type: string
+    message:
+      type: string

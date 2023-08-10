@@ -1,0 +1,7 @@
+Textbausteine:
+  type: array
+  items:
+    $ref: './TextbausteinOhneNutzdaten.yaml#/TextbausteinOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

@@ -1,0 +1,7 @@
+Ablaufentscheidungspunkte:
+  type: array
+  items:
+    $ref: './Ablaufentscheidungspunkt.yaml#/Ablaufentscheidungspunkt'
+  xml:
+    wrapped: true
+    name: 'Ablaufentscheidungspunkte'

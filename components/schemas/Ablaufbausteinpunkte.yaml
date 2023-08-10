@@ -1,0 +1,7 @@
+Ablaufbausteinpunkte:
+  type: array
+  items:
+    $ref: './Ablaufbausteinpunkt.yaml#/Ablaufbausteinpunkt'
+  xml:
+    wrapped: true
+    name: 'Ablaufbausteinpunkte'

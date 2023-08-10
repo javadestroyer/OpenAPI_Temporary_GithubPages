@@ -1,0 +1,7 @@
+TailoringRollen:
+  type: array
+  items:
+    $ref: './TailoringRolleOhneNutzdaten.yaml#/TailoringRolleOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

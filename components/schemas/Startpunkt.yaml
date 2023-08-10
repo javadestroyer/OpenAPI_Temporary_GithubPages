@@ -1,0 +1,13 @@
+Startpunkt:
+  allOf:
+    - $ref: './Ablaufpunkt.yaml#/Ablaufpunkt'
+    - type: object
+      xml:
+        name: 'Startpunkt'
+      required:
+        - version
+      properties:
+        version:
+          type: string
+          xml:
+            attribute: true

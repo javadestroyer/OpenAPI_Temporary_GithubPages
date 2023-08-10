@@ -1,0 +1,25 @@
+Entscheidungspunkt:
+  type: object
+  xml:
+    name: 'Entscheidungspunkt'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    Nummer:
+      type: integer
+    Sinn_und_Zweck:
+      $ref: './typeHtml.yaml#/typeHtml'

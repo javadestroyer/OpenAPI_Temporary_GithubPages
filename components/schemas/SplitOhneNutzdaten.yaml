@@ -1,0 +1,30 @@
+SplitOhneNutzdaten:
+  type: object
+  xml:
+    name: 'Split'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    SplitEingang:
+      $ref: './SplitEingangOhneNutzdaten.yaml#/SplitEingangOhneNutzdaten'
+    SplitAusgang:
+      type: array
+      items:
+        $ref: './SplitAusgangOhneNutzdaten.yaml#/SplitAusgangOhneNutzdaten'
+      xml:
+        wrapped: true
+        name: 'SplitAusgänge'

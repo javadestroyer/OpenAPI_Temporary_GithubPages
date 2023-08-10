@@ -1,0 +1,7 @@
+WertID:
+  in: path
+  name: WertID
+  required: true
+  description: the ID of the Wert
+  schema:
+    $ref: '../schemas/Wert.yaml#/Wert/properties/id'

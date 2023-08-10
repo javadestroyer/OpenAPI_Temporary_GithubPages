@@ -1,0 +1,7 @@
+WerkzeugreferenzID:
+  in: path
+  name: WerkzeugreferenzID
+  required: true
+  description: the ID of the Werkzeugreferenz
+  schema:
+    $ref: '../schemas/Werkzeugreferenz.yaml#/Werkzeugreferenz/properties/id'

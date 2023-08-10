@@ -1,0 +1,43 @@
+KapitelOhneNutzdaten:
+  type: object
+  xml:
+    name: 'Kapitel'
+  required:
+    - id
+    - version
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    titel:
+      type: string
+      xml:
+        attribute: true
+    Absatz:
+      $ref: 'typeAbsatzOhneNutzdaten.yaml#/typeAbsatzOhneNutzdaten'
+    Disziplingruppe:
+      $ref: 'typeDisziplingruppeOhneNutzdaten.yaml#/typeDisziplingruppeOhneNutzdaten'
+    AusgeschlossenBeiExportvarianteRef:
+      type: array
+      nullable: true
+      items:
+        type: object
+        xml:
+          name: 'AusgeschlossenBeiExportvarianteRef'
+        properties:
+          id:
+            $ref: './Exportvariante.yaml#/Exportvariante/properties/id'
+          name:
+            $ref: './Exportvariante.yaml#/Exportvariante/properties/name'
+      xml:
+        wrapped: true
+        name: 'AusgeschlossenBeiExportvarianteRefs'
+    Kapitel:
+      type: array
+      items:
+        $ref: 'AnderesKapitelOhneNutzdaten.yaml#/AnderesKapitelOhneNutzdaten'

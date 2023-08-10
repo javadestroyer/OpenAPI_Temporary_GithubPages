@@ -1,0 +1,38 @@
+V-Modell-Struktur:
+  type: object
+  xml:
+    name: 'V-Modellstruktur'
+    required:
+      - id
+      - version
+      - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    Kapitel:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Kapitel'
+        properties:
+          id:
+            $ref: './Kapitel.yaml#/Kapitel/properties/id'
+          Titel:
+            $ref: './Kapitel.yaml#/Kapitel/properties/titel'
+      xml:
+        wrapped: true
+        name: 'Kapitel'
+    Exportvariante:
+      type: array
+      items:
+        $ref: './Exportvariante.yaml#/Exportvariante'
+      xml:
+        wrapped: true
+        name: 'Exportvarianten'

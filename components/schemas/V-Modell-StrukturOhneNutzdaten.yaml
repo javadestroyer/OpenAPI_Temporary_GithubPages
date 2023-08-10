@@ -1,0 +1,38 @@
+V-Modell-StrukturOhneNutzdaten:
+  type: object
+  xml:
+    name: 'V-Modellstruktur'
+    required:
+      - id
+      - version
+      - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    Kapitel:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'Kapitel'
+        properties:
+          id:
+            $ref: './Kapitel.yaml#/Kapitel/properties/id'
+          Titel:
+            $ref: './Kapitel.yaml#/Kapitel/properties/titel'
+      xml:
+        wrapped: true
+        name: 'Kapitel'
+    Exportvariante:
+      type: array
+      items:
+        $ref: './ExportvarianteOhneNutzdaten.yaml#/ExportvarianteOhneNutzdaten'
+      xml:
+        wrapped: true
+        name: 'Exportvarianten'

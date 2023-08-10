@@ -1,0 +1,20 @@
+TailoringRollenkategorie:
+  type: object
+  xml:
+    name: 'Rollenkategorie'
+  properties:
+    name:
+      type: string
+      xml:
+        attribute: true
+    RollenRefs:
+      type: array
+      items:
+        type: object
+        xml:
+          name: 'RolleRef'
+        properties:
+          id:
+            $ref: './TailoringRolle.yaml#/TailoringRolle/properties/id'
+          name:
+            $ref: './TailoringRolle.yaml#/TailoringRolle/properties/name'

@@ -1,0 +1,53 @@
+Kapitel:
+  type: object
+  xml:
+    name: 'Kapitel'
+  required:
+    - id
+    - version
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    titel:
+      type: string
+      xml:
+        attribute: true
+    WirdErsetzt:
+      $ref: 'typeNeinJaAttribute.yaml#/typeNeinJaAttribute'
+    GenerierterInhalt:
+      $ref: 'typeGenContent.yaml#/typeGenContent'
+    GenerierterInhaltErsetzend:
+      $ref: 'typeGenContent.yaml#/typeGenContent'
+    Nummer:
+      type: integer
+    Text:
+      $ref: 'typeHtml.yaml#/typeHtml'
+    Absatz:
+      $ref: 'typeAbsatz.yaml#/typeAbsatz'
+    Disziplingruppe:
+      $ref: 'typeDisziplingruppe.yaml#/typeDisziplingruppe'
+    AusgeschlossenBeiExportvarianteRef:
+      type: array
+      nullable: true
+      items:
+        type: object
+        xml:
+          name: 'AusgeschlossenBeiExportvarianteRef'
+        properties:
+          id:
+            $ref: './Exportvariante.yaml#/Exportvariante/properties/id'
+          name:
+            $ref: './Exportvariante.yaml#/Exportvariante/properties/name'
+      xml:
+        wrapped: true
+        name: 'AusgeschlossenBeiExportvarianteRefs'
+    Kapitel:
+      type: array
+      items:
+        $ref: 'AnderesKapitel.yaml#/AnderesKapitel'

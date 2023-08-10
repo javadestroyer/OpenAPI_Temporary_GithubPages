@@ -1,0 +1,32 @@
+Split:
+  type: object
+  xml:
+    name: 'Split'
+  required:
+    - id
+    - version
+    - name
+  properties:
+    id:
+      type: string
+      xml:
+        attribute: true
+    version:
+      type: string
+      xml:
+        attribute: true
+    name:
+      type: string
+      xml:
+        attribute: true
+    Beschreibung:
+      $ref: './typeHtml.yaml#/typeHtml'
+    SplitEingang:
+      $ref: './SplitEingang.yaml#/SplitEingang'
+    SplitAusgang:
+      type: array
+      items:
+        $ref: './SplitAusgang.yaml#/SplitAusgang'
+      xml:
+        wrapped: true
+        name: 'SplitAusgänge'

@@ -1,0 +1,7 @@
+Projektmerkmale:
+  type: array
+  items:
+    $ref: './ProjektmerkmalOhneNutzdaten.yaml#/ProjektmerkmalOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response

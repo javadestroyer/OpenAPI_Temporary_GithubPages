@@ -1,0 +1,7 @@
+AblaufbausteinspezifikationID:
+  in: path
+  name: AblaufbausteinspezifikationID
+  required: true
+  description: the ID of the Ablaufbausteinspezifikation
+  schema:
+    $ref: '../schemas/Ablaufbausteinspezifikation.yaml#/Ablaufbausteinspezifikation/properties/id'

@@ -1,0 +1,18 @@
+JoinEingangOhneNutzdaten:
+  allOf:
+    - $ref: './Ablaufpunkt.yaml#/Ablaufpunkt'
+    - type: object
+      xml:
+        name: 'JoinEingang'
+      required:
+        - version
+        - name
+      properties:
+        version:
+          type: string
+          xml:
+            attribute: true
+        name:
+          type: string
+          xml:
+            attribute: true

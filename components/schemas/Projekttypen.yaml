@@ -1,0 +1,7 @@
+Projekttypen:
+  type: array
+  items:
+    $ref: './ProjekttypOhneNutzdaten.yaml#/ProjekttypOhneNutzdaten'
+  xml:
+    wrapped: true
+    name: response
